@@ -1,4 +1,5 @@
-from replit import clear
+import replit
+
 
 
 import art
@@ -20,10 +21,10 @@ def highest_bidder(bidingl):
 while not bidding_finished:
     name = input("What is your name?\n")
     price = input("What is your bid? $\n")
-    if type(price) != int:
-        price = int(input("Please use numbers only!\n What is your bid? $\n"))
+    if price.isdigit():
+       price = int.price
     else:
-        price = int(price)
+        price = int(input("Please use numbers only!\n What is your bid? $\n"))
 
     bids[name] = price
     keep_going = input("Are there any other bidders? Type 'yes' or 'no'\n").lower()
@@ -31,6 +32,4 @@ while not bidding_finished:
         bidding_finished = True
         highest_bidder(bids)
     elif keep_going == 'yes':
-        clear()
-
-
+        replit.clear()
