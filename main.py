@@ -1,28 +1,28 @@
 import replit
 
-
-
 import art
 print(art.logo)
 
 bids = {}
 bidding_finished = False
 
-def highest_bidder(bidingl):
+
+def highest_bidder(biddingl):
     highest_bid = 0
     winner = ""
-    for bidder in bidingl:
-        bid_amount = bidingl[bidder]
+    for bidder in biddingl:
+        bid_amount = biddingl[bidder]
         if bid_amount > highest_bid:
             highest_bid = bid_amount
             winner = bidder
     print(f"The winner is {winner} with ${highest_bid}")
 
+
 while not bidding_finished:
     name = input("What is your name?\n")
     price = input("What is your bid? $\n")
     if price.isdigit():
-       price = int.price
+        price = int(price)
     else:
         price = int(input("Please use numbers only!\n What is your bid? $\n"))
 
